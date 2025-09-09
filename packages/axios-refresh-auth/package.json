@@ -2,7 +2,7 @@
   "name": "axios-refresh-auth",
   "private": false,
   "description": "An Axios interceptor that provides a robust and intuitive mechanism for handling token refresh with concurrency safety.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "yikenman",
   "license": "MIT",
   "exports": {
