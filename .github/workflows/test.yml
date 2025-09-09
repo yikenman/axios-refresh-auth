@@ -61,15 +61,6 @@ jobs:
       - name: Install Dependencies
         run: pnpm i
 
-      - name: Download and extract python-pptx-recipe packages for python-pptx-wasm
-        if: matrix.name == 'python-pptx-wasm'
-        run: |
-          mkdir -p packages/python-pptx-wasm/test/assets
-          gh release download --repo yikenman/python-pptx-recipe --pattern "packages.tar.gz" --output packages.tar.gz
-          tar -xzf packages.tar.gz -C packages/python-pptx-wasm/test/assets
-        env:
-          GH_TOKEN: ${{ github.token }}
-
       - name: Run Test Parallel
         run: pnpm run test --filter=${{ matrix.name }}...
 
